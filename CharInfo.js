@@ -64,8 +64,8 @@ const characterList = {
         c.Wulf,
         [c.BBand, c.Rob, c.Umbrella],
         [c.Bella, c.Double, c.Liz, c.Fukua, c.Soul, c.Squig, c.Anne],
-        [c.Fil, c.Fortune, c.Pain, c.Peak, c.Val],
-        []
+        [c.Fil, c.Pain, c.Peak, c.Val],
+        [c.Fortune]
     ),
 
     "BBand": char2 = new newCharacter(
