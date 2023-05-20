@@ -8,56 +8,88 @@
 
         <h1>Skullgirls Synergy Selector</h1>
 
-        <p>This site is meant as a tool to easily access information taken from <a href="https://sites.google.com/view/sgteamguide/introduction?authuser=0">this online guide</a>.</p>
+        <p>This site is meant as a tool to easily access information taken from <a href="https://sites.google.com/view/sgteamguide/introduction?authuser=0">this guide</a>, which I do not claim ownership of.</p>
 
         <div>
-            <p>Fighter:</p>
-            <select name="Fighter" id="FighterIn">
-                <option value="1">Beowulf</option>
-                <option value="2">Big Band</option>
-                <option value="3">Cerebella</option>
-                <option value="4">Double</option>
-                <option value="5">Eliza</option>
-                <option value="6">Filia</option>
-                <option value="7">Ms. Fortune</option>
-                <option value="8">Fukua</option>
-                <option value="9">Painwheel</option>
-                <option value="10">Parasoul</option>
-                <option value="11">Peacock</option>
-                <option value="12">Robo Fortune</option>
-                <option value="13">Squigly</option>
-                <option value="14">Valentine</option>
-                <option value="15">Annie</option>
-                <option value="16">Umbrella</option>
+            <p>Fighter 1:</p>
+            <select name="Fighter" id="Fighter1In">
+                <option value="None">No Fighter</option>
+                <option value="Wulf">Beowulf</option>
+                <option value="BBand">Big Band</option>
+                <option value="Bella">Cerebella</option>
+                <option value="Double">Double</option>
+                <option value="Liz">Eliza</option>
+                <option value="Fil">Filia</option>
+                <option value="Fortune">Ms. Fortune</option>
+                <option value="Fukua">Fukua</option>
+                <option value="Pain">Painwheel</option>
+                <option value="Soul">Parasoul</option>
+                <option value="Peak">Peacock</option>
+                <option value="Rob">Robo Fortune</option>
+                <option value="Sqiog">Squigly</option>
+                <option value="Val">Valentine</option>
+                <option value="Anne">Annie</option>
+                <option value="Umbrella">Umbrella</option>
             </select>
             
-            <p>Assist:</p>
-            <select name="Assist" id="AssistIn">
-                <option value="1">Beowulf</option>
-                <option value="2">Big Band</option>
-                <option value="3">Cerebella</option>
-                <option value="4">Double</option>
-                <option value="5">Eliza</option>
-                <option value="6">Filia</option>
-                <option value="7">Ms. Fortune</option>
-                <option value="8">Fukua</option>
-                <option value="9">Painwheel</option>
-                <option value="10">Parasoul</option>
-                <option value="11">Peacock</option>
-                <option value="12">Robo Fortune</option>
-                <option value="13">Squigly</option>
-                <option value="14">Valentine</option>
-                <option value="15">Annie</option>
-                <option value="16">Umbrella</option>
+            <p>Fighter 2:</p>
+            <select name="Fighter" id="Fighter2In">
+                <option value="None">No Fighter</option>
+                <option value="Wulf">Beowulf</option>
+                <option value="BBand">Big Band</option>
+                <option value="Bella">Cerebella</option>
+                <option value="Double">Double</option>
+                <option value="Liz">Eliza</option>
+                <option value="Fil">Filia</option>
+                <option value="Fortune">Ms. Fortune</option>
+                <option value="Fukua">Fukua</option>
+                <option value="Pain">Painwheel</option>
+                <option value="Soul">Parasoul</option>
+                <option value="Peak">Peacock</option>
+                <option value="Rob">Robo Fortune</option>
+                <option value="Sqiog">Squigly</option>
+                <option value="Val">Valentine</option>
+                <option value="Anne">Annie</option>
+                <option value="Umbrella">Umbrella</option>
+            </select>
+
+            <p>Fighter 3:</p>
+            <select name="Fighter" id="Fighter3In">
+                <option value="None">No Fighter</option>
+                <option value="Wulf">Beowulf</option>
+                <option value="BBand">Big Band</option>
+                <option value="Bella">Cerebella</option>
+                <option value="Double">Double</option>
+                <option value="Liz">Eliza</option>
+                <option value="Fil">Filia</option>
+                <option value="Fortune">Ms. Fortune</option>
+                <option value="Fukua">Fukua</option>
+                <option value="Pain">Painwheel</option>
+                <option value="Soul">Parasoul</option>
+                <option value="Peak">Peacock</option>
+                <option value="Rob">Robo Fortune</option>
+                <option value="Sqiog">Squigly</option>
+                <option value="Val">Valentine</option>
+                <option value="Anne">Annie</option>
+                <option value="Umbrella">Umbrella</option>
             </select>
         </div>
 
         <br>
         <button type="button" onclick="showSynergy()">Show Synergy</button><br>
 
-        <p id="FighterOut">Fighter: None</p>
-        <p id="AssistOut">Assist: None</p>
-        <p id="SynergyOut">Synergy: None</p>
+        <br>
+        <p id="Fighter1Out"></p>
+        <p id="Synergy1Out"></p>
+
+        <br>
+        <p id="Fighter2Out"></p>
+        <p id="Synergy2Out"></p>
+
+        <br>
+        <p id="Fighter3Out"></p>
+        <p id="Synergy3Out"></p>
+        
 
         <script src="CharInfo.js"></script>
     </body>
