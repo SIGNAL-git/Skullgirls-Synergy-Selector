@@ -219,6 +219,11 @@ function showSynergy()
     select2 = characterList[document.getElementById("Fighter2In").value];
     select3 = characterList[document.getElementById("Fighter3In").value];
 
+
+    document.getElementById("Fighter1").src = `Portraits/${select1.charName}.jpg`;
+    document.getElementById("Fighter2").src = `Portraits/${select2.charName}.jpg`;
+    document.getElementById("Fighter3").src = `Portraits/${select3.charName}.jpg`;
+
     document.getElementById("Fighter1Out").innerHTML = `Fighter: ${select1.charName}`;
     document.getElementById("Fighter2Out").innerHTML = `Fighter: ${select2.charName}`;
     document.getElementById("Fighter3Out").innerHTML = `Fighter: ${select3.charName}`;
@@ -232,10 +237,12 @@ function showSynergy()
         if (select2)
         {
             synergy1 += `<br>${select1.charName} with ${select2.charName} assist: ${select1.synergyWith(select2)}`;
+            document.getElementById("Synergy1With2").src = `Arrows/${select1.synergyWith(select2)}SW.png`;
         }
         if (select3)
         {
             synergy1 += `<br>${select1.charName} with ${select3.charName} assist: ${select1.synergyWith(select3)}`;
+            document.getElementById("Synergy1With3").src = `Arrows/${select1.synergyWith(select3)}NE.png`;
         }
         document.getElementById("Synergy1Out").innerHTML = `Synergies: ${synergy1}`;
     }
@@ -250,10 +257,12 @@ function showSynergy()
         if (select1)
         {
             synergy2 += `<br>${select2.charName} with ${select1.charName} assist: ${select2.synergyWith(select1)}`;
+            document.getElementById("Synergy2With1").src = `Arrows/${select2.synergyWith(select1)}NE.png`;
         }
         if (select3)
         {
             synergy2 += `<br>${select2.charName} with ${select3.charName} assist: ${select2.synergyWith(select3)}`;
+            document.getElementById("Synergy2With3").src = `Arrows/${select2.synergyWith(select3)}NE.png`;
         }
         document.getElementById("Synergy2Out").innerHTML = `Synergies: ${synergy2}`;
     }
@@ -268,10 +277,12 @@ function showSynergy()
         if (select1)
         {
             synergy3 += `<br>${select3.charName} with ${select1.charName} assist: ${select3.synergyWith(select1)}`;
+            document.getElementById("Synergy3With1").src = `Arrows/${select3.synergyWith(select1)}SW.png`;
         }
         if (select2)
         {
             synergy3 += `<br>${select3.charName} with ${select2.charName} assist: ${select3.synergyWith(select2)}`;
+            document.getElementById("Synergy3With2").src = `Arrows/${select3.synergyWith(select2)}SW.png`;
         }
         document.getElementById("Synergy3Out").innerHTML = `Synergies: ${synergy3}`;
     }

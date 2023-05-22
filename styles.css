@@ -1,0 +1,29 @@
+/* war crimes */
+
+.sideways {
+    transform: rotate(-90deg) translateY(-10px);
+}
+
+.diagonal {
+    transform: rotate(-45deg) translateY(-10px);
+}
+
+.pushleft
+{
+    transform: translateX(-120px);
+}
+
+.sideways-pushleft
+{
+    transform: translateX(-120px) rotate(-90deg);
+}
+
+.diagonal-slightleft
+{
+    transform: translateX(-100px) rotate(-45deg) translateY(20px);
+}
+
+.diagonal-pushleft
+{
+    transform: translateX(-200px) rotate(-45deg) translateY(20px);
+}
