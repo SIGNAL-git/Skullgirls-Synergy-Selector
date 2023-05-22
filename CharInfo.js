@@ -250,6 +250,11 @@ function showSynergy()
     {
         document.getElementById("Fighter1Out").innerHTML = ``;
         document.getElementById("Synergy1Out").innerHTML = ``;
+        document.getElementById("Fighter1").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy1With2").src = `Arrows/ItselfSW.png`;
+        document.getElementById("Synergy2With1").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy1With3").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy3With1").src = `Arrows/ItselfSW.png`;
     }
 
     if (select2)
@@ -270,6 +275,11 @@ function showSynergy()
     {
         document.getElementById("Fighter2Out").innerHTML = ``;
         document.getElementById("Synergy2Out").innerHTML = ``;
+        document.getElementById("Fighter2").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy2With1").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy2With3").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy1With2").src = `Arrows/ItselfSW.png`;
+        document.getElementById("Synergy3With2").src = `Arrows/ItselfSW.png`;
     }
 
     if (select3)
@@ -290,6 +300,11 @@ function showSynergy()
     {
         document.getElementById("Fighter3Out").innerHTML = ``;
         document.getElementById("Synergy3Out").innerHTML = ``;
+        document.getElementById("Fighter3").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy3With1").src = `Arrows/ItselfSW.png`;
+        document.getElementById("Synergy3With2").src = `Arrows/ItselfSW.png`;
+        document.getElementById("Synergy1With3").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Synergy2With3").src = `Arrows/ItselfNE.png`;
     }
 
 }
