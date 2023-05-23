@@ -1,6 +1,7 @@
 // Avert your eyes, programmers!
 // Shoddy amateur work ahead!
 
+// Character shorthands
 const c = {
     Wulf: "Beowulf",
     BBand: "Big Band",
@@ -21,7 +22,8 @@ const c = {
     BDahl: "Black Dahlia"
 }
 
-function newCharacter(charName, fighterFavs, fighterGoods, fighterDecents, fighterPoors) {
+// Character constructor
+function character(charName, fighterFavs, fighterGoods, fighterDecents, fighterPoors) {
     this.charName = charName;
     this.fighterFavs = fighterFavs;
     this.fighterGoods = fighterGoods;
@@ -29,38 +31,12 @@ function newCharacter(charName, fighterFavs, fighterGoods, fighterDecents, fight
     this.fighterPoors = fighterPoors;
 }
 
-newCharacter.prototype.synergyWith = function(otherChar) {
-    if (this.fighterFavs.includes(otherChar.charName))
-    {
-        return "Favourite";
-    }
-    else if (this.fighterGoods.includes(otherChar.charName))
-    {
-        return "Good";
-    }
-    else if (this.fighterDecents.includes(otherChar.charName))
-    {
-        return "Decent";
-    }
-    else if (this.fighterPoors.includes(otherChar.charName))
-    {
-        return "Poor";
-    }
-    else if (this.charName == otherChar.charName)
-    {
-        return "Itself";
-    }
-    else
-    {
-        return "Unset Synergy, contact the developer!";
-    }
-}
-
-
+// List of characters
+// I hope you brought your collapsibles
 const characterList = {
     "None": 0,
 
-    "Wulf": char1 = new newCharacter(
+    "Wulf": char1 = new character(
         c.Wulf,
         [c.BBand, c.Rob, c.Umbrella],
         [c.Bella, c.Double, c.Liz, c.Fukua, c.Soul, c.Squig, c.Anne],
@@ -68,7 +44,7 @@ const characterList = {
         [c.Fortune]
     ),
 
-    "BBand": char2 = new newCharacter(
+    "BBand": char2 = new character(
         c.BBand,
         [c.Double, c.Pain, c.Soul, c.Rob, c.Squig, c.Anne],
         [c.Wulf, c.Bella, c.Liz, c.Fil, c.Fukua, c.Peak, c.Val, c.Umbrella],
@@ -76,7 +52,7 @@ const characterList = {
         [c.Fortune]
     ),
 
-    "Bella": char3 = new newCharacter(
+    "Bella": char3 = new character(
         c.Bella,
         [c.BBand, c.Double, c.Rob],
         [c.Liz, c.Fil, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Val, c.Umbrella, c.Anne],
@@ -84,7 +60,7 @@ const characterList = {
         [c.Fortune]
     ),
 
-    "Double": char4 = new newCharacter(
+    "Double": char4 = new character(
         c.Double,
         [c.BBand, c.Liz, c.Fukua, c.Soul, c.Rob],
         [c.Wulf, c.Bella, c.Fil, c.Pain, c.Peak, c.Squig, c.Val, c.Umbrella, c.Anne],
@@ -92,7 +68,7 @@ const characterList = {
         []
     ),
 
-    "Liz": char5 = new newCharacter(
+    "Liz": char5 = new character(
         c.Liz,
         [c.BBand, c.Double, c.Fukua, c.Rob, c.Squig],
         [c.Bella, c.Fil, c.Soul, c.Peak, c.Anne],
@@ -100,7 +76,7 @@ const characterList = {
         [c.Val]
     ),
 
-    "Fil": char6 = new newCharacter(
+    "Fil": char6 = new character(
         c.Fil,
         [c.BBand, c.Bella, c.Double, c.Liz, c.Rob],
         [c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Umbrella, c.Anne],
@@ -108,7 +84,7 @@ const characterList = {
         [c.Fortune, c.Val]
     ),
 
-    "Fortune": char7 = new newCharacter(
+    "Fortune": char7 = new character(
         c.Fortune,
         [c.BBand, c.Bella, c.Double, c.Liz, c.Soul, c.Rob, c.Squig, c.Umbrella, c.Anne],
         [c.Fil, c.Fukua, c.Pain, c.Peak],
@@ -116,7 +92,7 @@ const characterList = {
         []
     ),
 
-    "Fukua": char8 = new newCharacter(
+    "Fukua": char8 = new character(
         c.Fukua,
         [c.BBand, c.Bella, c.Double, c.Pain, c.Rob, c.Umbrella, c.Anne],
         [c.Liz, c.Fil, c.Soul, c.Peak, c.Squig],
@@ -124,7 +100,7 @@ const characterList = {
         [c.Fortune]
     ),
 
-    "Pain": char9 = new newCharacter(
+    "Pain": char9 = new character(
         c.Pain,
         [c.BBand, c.Bella, c.Double, c.Rob],
         [c.Fil, c.Fortune, c.Fukua, c.Soul, c.Peak, c.Umbrella, c.Anne],
@@ -132,7 +108,7 @@ const characterList = {
         [c.Val]
     ),
 
-    "Soul": char10 = new newCharacter(
+    "Soul": char10 = new character(
         c.Soul,
         [c.BBand, c.Bella, c.Double, c.Fukua, c.Pain, c.Rob],
         [c.Liz, c.Fil, c.Peak, c.Squig, c.Umbrella, c.Anne],
@@ -140,7 +116,7 @@ const characterList = {
         [c.Val]
     ),
 
-    "Peak": char11 = new newCharacter(
+    "Peak": char11 = new character(
         c.Peak,
         [c.BBand, c.Bella, c.Double, c.Fil, c.Rob, c.Umbrella, c.Anne],
         [c.Wulf, c.Liz, c.Fukua, c.Pain, c.Soul, c.Squig],
@@ -148,7 +124,7 @@ const characterList = {
         [c.Val]
     ),
 
-    "Rob": char12 = new newCharacter(
+    "Rob": char12 = new character(
         c.Rob,
         [c.BBand, c.Double, c.Liz, c.Fil, c.Umbrella, c.Anne],
         [c.Wulf, c.Bella, c.Fortune, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Val],
@@ -156,7 +132,7 @@ const characterList = {
         []
     ),
 
-    "Squig": char13 = new newCharacter(
+    "Squig": char13 = new character(
         c.Squig,
         [c.BBand, c.Rob],
         [c.Wulf, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Peak, c.Val, c.Umbrella, c.Anne],
@@ -164,7 +140,7 @@ const characterList = {
         []
     ),
 
-    "Val": char14 = new newCharacter(
+    "Val": char14 = new character(
         c.Val,
         [c.BBand, c.Bella, c.Double, c.Rob],
         [c.Liz, c.Fil, c.Fukua, c.Soul, c.Squig, c.Umbrella, c.Anne],
@@ -172,7 +148,7 @@ const characterList = {
         [c.Fortune, c.Pain]
     ),
 
-    "Anne": char15 = new newCharacter(
+    "Anne": char15 = new character(
         c.Anne,
         [c.BBand, c.Rob],
         [c.Wulf, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Peak, c.Squig, c.Umbrella],
@@ -180,7 +156,7 @@ const characterList = {
         []
     ),
 
-    "Umbrella": char16 = new newCharacter(
+    "Umbrella": char16 = new character(
         c.Umbrella,
         [c.BBand, c.Fil, c.Rob],
         [c.Bella, c.Double, c.Liz, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Anne],
@@ -189,7 +165,7 @@ const characterList = {
     )
 
     /*
-    const char17 = new newCharacter(
+    const char17 = new character(
         "Black Dahlia",
         [""],
         [""],
@@ -199,7 +175,7 @@ const characterList = {
     */
 
     /*
-    const char18 = new newCharacter(
+    const char18 = new character(
         "Marie",
         [""],
         [""],
@@ -213,98 +189,139 @@ let select1 = null;
 let select2 = null;
 let select3 = null;
 
-function showSynergy()
+/**
+ * Checks the status of an other character as an assist to the current one.
+ * @param {character} assist Character to be compared to
+ * @returns {string} Synergy status
+ */
+character.prototype.getSynergyWith = function(assist) {
+    switch (true)
+    {
+        case this.fighterFavs.includes(assist.charName):
+            return "Favourite";
+
+        case this.fighterGoods.includes(assist.charName):
+            return "Good";
+
+        case this.fighterDecents.includes(assist.charName):
+            return "Decent";
+
+        case this.fighterPoors.includes(assist.charName):
+            return "Poor";
+
+        case this.charName == assist.charName:
+            return "Itself";
+
+        default:
+            return "Unset Synergy, contact the developer!";
+    }
+}
+
+/**
+ * Returns the synergies for the associated character, given its assists
+ * @param {character} assist1 
+ * @param {character} assist2 
+ */
+character.prototype.synergyWith = function(assist1, assist2)
 {
+    let synergy = "";
+
+    if (this) // Check synergies if a character is selected
+    {
+        if (assist1)
+        {
+            synergy += `<br>${this.charName} with ${assist1.charName} assist: ${this.getSynergyWith(assist1)}`;
+            
+        }
+        if (assist2)
+        {
+            synergy += `<br>${this.charName} with ${assist2.charName} assist: ${this.getSynergyWith(assist2)}`;
+        }
+
+        return `<br> Synergies: ${synergy}`;
+    }
+    else
+    {
+        return ``;
+    }
+}
+
+/**
+ * Remove all text and image synergies
+ */
+const outputs = document.getElementsByClassName("output");
+const images = document.getElementsByTagName("img");
+function clearAll()
+{
+    for (let i = 0; i < outputs.length; i++)
+    {
+        outputs[i].style.display = "none";
+    }
+    for (let i = 0; i < images.length; i++)
+    {
+        images[i].style.visibility = "hidden";
+    }
+}
+
+clearAll();
+
+function showAllSynergies()
+{
+    clearAll();
+
     select1 = characterList[document.getElementById("Fighter1In").value];
     select2 = characterList[document.getElementById("Fighter2In").value];
     select3 = characterList[document.getElementById("Fighter3In").value];
 
-
-    document.getElementById("Fighter1").src = `Portraits/${select1.charName}.jpg`;
-    document.getElementById("Fighter2").src = `Portraits/${select2.charName}.jpg`;
-    document.getElementById("Fighter3").src = `Portraits/${select3.charName}.jpg`;
-
-    document.getElementById("Fighter1Out").innerHTML = `Fighter: ${select1.charName}`;
-    document.getElementById("Fighter2Out").innerHTML = `Fighter: ${select2.charName}`;
-    document.getElementById("Fighter3Out").innerHTML = `Fighter: ${select3.charName}`;
-
-    let synergy1 = "";
-    let synergy2 = "";
-    let synergy3 = "";
-
+    // Fighter outputs and fighter images
     if (select1)
     {
-        if (select2)
-        {
-            synergy1 += `<br>${select1.charName} with ${select2.charName} assist: ${select1.synergyWith(select2)}`;
-            document.getElementById("Synergy1With2").src = `Arrows/${select1.synergyWith(select2)}SW.png`;
-        }
-        if (select3)
-        {
-            synergy1 += `<br>${select1.charName} with ${select3.charName} assist: ${select1.synergyWith(select3)}`;
-            document.getElementById("Synergy1With3").src = `Arrows/${select1.synergyWith(select3)}NE.png`;
-        }
-        document.getElementById("Synergy1Out").innerHTML = `Synergies: ${synergy1}`;
+        document.getElementById("Fighter1").src = `Portraits/${select1.charName}.jpg`;
+        document.getElementById("Fighter1").style.visibility = "visible";
+        document.getElementById("Fighter1Out").innerHTML = `<br> Fighter: ${select1.charName}`;
+        document.getElementById("Synergy1Out").innerHTML = select1.synergyWith(select2, select3);
+        document.getElementById("Fighter1Out").style.display = "inline";
+        document.getElementById("Synergy1Out").style.display = "inline";
     }
-    else
-    {
-        document.getElementById("Fighter1Out").innerHTML = ``;
-        document.getElementById("Synergy1Out").innerHTML = ``;
-        document.getElementById("Fighter1").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy1With2").src = `Arrows/ItselfSW.png`;
-        document.getElementById("Synergy2With1").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy1With3").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy3With1").src = `Arrows/ItselfSW.png`;
-    }
-
     if (select2)
     {
-        if (select1)
-        {
-            synergy2 += `<br>${select2.charName} with ${select1.charName} assist: ${select2.synergyWith(select1)}`;
-            document.getElementById("Synergy2With1").src = `Arrows/${select2.synergyWith(select1)}NE.png`;
-        }
-        if (select3)
-        {
-            synergy2 += `<br>${select2.charName} with ${select3.charName} assist: ${select2.synergyWith(select3)}`;
-            document.getElementById("Synergy2With3").src = `Arrows/${select2.synergyWith(select3)}NE.png`;
-        }
-        document.getElementById("Synergy2Out").innerHTML = `Synergies: ${synergy2}`;
+        document.getElementById("Fighter2").src = `Portraits/${select2.charName}.jpg`;
+        document.getElementById("Fighter2").style.visibility = "visible";
+        document.getElementById("Fighter2Out").innerHTML = `<br><br> Fighter: ${select2.charName}`;
+        document.getElementById("Synergy2Out").innerHTML = select2.synergyWith(select1, select3);
+        document.getElementById("Fighter2Out").style.display = "inline";
+        document.getElementById("Synergy2Out").style.display = "inline";
     }
-    else
-    {
-        document.getElementById("Fighter2Out").innerHTML = ``;
-        document.getElementById("Synergy2Out").innerHTML = ``;
-        document.getElementById("Fighter2").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy2With1").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy2With3").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy1With2").src = `Arrows/ItselfSW.png`;
-        document.getElementById("Synergy3With2").src = `Arrows/ItselfSW.png`;
-    }
-
     if (select3)
     {
-        if (select1)
-        {
-            synergy3 += `<br>${select3.charName} with ${select1.charName} assist: ${select3.synergyWith(select1)}`;
-            document.getElementById("Synergy3With1").src = `Arrows/${select3.synergyWith(select1)}SW.png`;
-        }
-        if (select2)
-        {
-            synergy3 += `<br>${select3.charName} with ${select2.charName} assist: ${select3.synergyWith(select2)}`;
-            document.getElementById("Synergy3With2").src = `Arrows/${select3.synergyWith(select2)}SW.png`;
-        }
-        document.getElementById("Synergy3Out").innerHTML = `Synergies: ${synergy3}`;
-    }
-    else
-    {
-        document.getElementById("Fighter3Out").innerHTML = ``;
-        document.getElementById("Synergy3Out").innerHTML = ``;
-        document.getElementById("Fighter3").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy3With1").src = `Arrows/ItselfSW.png`;
-        document.getElementById("Synergy3With2").src = `Arrows/ItselfSW.png`;
-        document.getElementById("Synergy1With3").src = `Arrows/ItselfNE.png`;
-        document.getElementById("Synergy2With3").src = `Arrows/ItselfNE.png`;
+        document.getElementById("Fighter3").src = `Portraits/${select3.charName}.jpg`;
+        document.getElementById("Fighter3").style.visibility = "visible";
+        document.getElementById("Fighter3Out").innerHTML = `<br><br> Fighter: ${select3.charName}`;
+        document.getElementById("Synergy3Out").innerHTML = select3.synergyWith(select1, select2);
+        document.getElementById("Fighter3Out").style.display = "inline";
+        document.getElementById("Synergy3Out").style.display = "inline";
     }
 
+    // Arrow images
+    if (select1 && select2 && (select1 != select2))
+    {
+        document.getElementById("Synergy1With2").style.visibility = "visible";
+        document.getElementById("Synergy1With2").src = `Arrows/${select1.getSynergyWith(select2)}SW.png`;
+        document.getElementById("Synergy2With1").style.visibility = "visible";
+        document.getElementById("Synergy2With1").src = `Arrows/${select2.getSynergyWith(select1)}NE.png`;
+    }
+    if (select2 && select3 && (select2 != select3))
+    {
+        document.getElementById("Synergy2With3").style.visibility = "visible";
+        document.getElementById("Synergy3With2").src = `Arrows/${select3.getSynergyWith(select2)}SW.png`;
+        document.getElementById("Synergy3With2").style.visibility = "visible";
+        document.getElementById("Synergy2With3").src = `Arrows/${select2.getSynergyWith(select3)}NE.png`;
+    }
+    if (select1 && select3 && (select1 != select3))
+    {
+        document.getElementById("Synergy1With3").style.visibility = "visible";
+        document.getElementById("Synergy3With1").src = `Arrows/${select3.getSynergyWith(select1)}SW.png`;
+        document.getElementById("Synergy3With1").style.visibility = "visible";
+        document.getElementById("Synergy1With3").src = `Arrows/${select1.getSynergyWith(select3)}NE.png`;
+    }
 }
