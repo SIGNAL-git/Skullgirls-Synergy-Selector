@@ -18,7 +18,7 @@ const c = {
     Anne: "Annie",
     Umbrella: "Umbrella",
     BDahl: "Black Dahlia",
-    Mary: "Marie"
+    Mari: "Marie"
 }
 
 // Character constructor
@@ -38,7 +38,7 @@ const characterList = {
     "Beowulf": char1 = new character(
         c.Wulf,
         [c.BBand, c.Rob, c.Umbrella],
-        [c.Bella, c.Double, c.Liz, c.Fukua, c.Soul, c.Squig, c.Anne, c.BDahl],
+        [c.Bella, c.Double, c.Liz, c.Fukua, c.Soul, c.Squig, c.Anne, c.BDahl, c.Mari],
         [c.Fil, c.Pain, c.Peak, c.Val],
         [c.Fortune]
     ),
@@ -46,7 +46,7 @@ const characterList = {
     "Big Band": char2 = new character(
         c.BBand,
         [c.Double, c.Pain, c.Soul, c.Rob, c.Squig, c.Anne],
-        [c.Wulf, c.Bella, c.Liz, c.Fil, c.Fukua, c.Peak, c.Val, c.Umbrella, c.BDahl],
+        [c.Wulf, c.Bella, c.Liz, c.Fil, c.Fukua, c.Peak, c.Val, c.Umbrella, c.BDahl, c.Mari],
         [],
         [c.Fortune]
     ),
@@ -54,7 +54,7 @@ const characterList = {
     "Cerebella": char3 = new character(
         c.Bella,
         [c.BBand, c.Double, c.Rob],
-        [c.Liz, c.Fil, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Val, c.Umbrella, c.Anne, c.BDahl],
+        [c.Liz, c.Fil, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Val, c.Umbrella, c.Anne, c.BDahl, c.Mari],
         [c.Wulf],
         [c.Fortune]
     ),
@@ -62,7 +62,7 @@ const characterList = {
     "Double": char4 = new character(
         c.Double,
         [c.BBand, c.Liz, c.Fukua, c.Soul, c.Rob],
-        [c.Wulf, c.Bella, c.Fil, c.Pain, c.Peak, c.Squig, c.Val, c.Umbrella, c.Anne, c.BDahl],
+        [c.Wulf, c.Bella, c.Fil, c.Pain, c.Peak, c.Squig, c.Val, c.Umbrella, c.Anne, c.BDahl, c.Mari],
         [c.Fortune],
         []
     ),
@@ -70,7 +70,7 @@ const characterList = {
     "Eliza": char5 = new character(
         c.Liz,
         [c.BBand, c.Double, c.Fukua, c.Rob, c.Squig],
-        [c.Bella, c.Fil, c.Soul, c.Peak, c.Anne],
+        [c.Bella, c.Fil, c.Soul, c.Peak, c.Anne, c.Mari],
         [c.Wulf, c.Fortune, c.Pain, c.Umbrella, c.BDahl],
         [c.Val]
     ),
@@ -78,7 +78,7 @@ const characterList = {
     "Filia": char6 = new character(
         c.Fil,
         [c.BBand, c.Bella, c.Double, c.Liz, c.Rob],
-        [c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Umbrella, c.Anne],
+        [c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Umbrella, c.Anne, c.Mari],
         [c.Wulf, c.BDahl],
         [c.Fortune, c.Val]
     ),
@@ -86,7 +86,7 @@ const characterList = {
     "Ms. Fortune": char7 = new character(
         c.Fortune,
         [c.BBand, c.Bella, c.Double, c.Liz, c.Soul, c.Rob, c.Squig, c.Umbrella, c.Anne],
-        [c.Fil, c.Fukua, c.Pain, c.Peak],
+        [c.Fil, c.Fukua, c.Pain, c.Peak, c.Mari],
         [c.Wulf, c.Val, c.BDahl],
         []
     ),
@@ -94,7 +94,7 @@ const characterList = {
     "Fukua": char8 = new character(
         c.Fukua,
         [c.BBand, c.Bella, c.Double, c.Pain, c.Rob, c.Umbrella, c.Anne],
-        [c.Liz, c.Fil, c.Soul, c.Peak, c.Squig, c.BDahl],
+        [c.Liz, c.Fil, c.Soul, c.Peak, c.Squig, c.BDahl, c.Mari],
         [c.Wulf, c.Val],
         [c.Fortune]
     ),
@@ -102,7 +102,7 @@ const characterList = {
     "Painwheel": char9 = new character(
         c.Pain,
         [c.BBand, c.Bella, c.Double, c.Rob],
-        [c.Fil, c.Fortune, c.Fukua, c.Soul, c.Peak, c.Umbrella, c.Anne, c.BDahl],
+        [c.Fil, c.Fortune, c.Fukua, c.Soul, c.Peak, c.Umbrella, c.Anne, c.BDahl, c.Mari],
         [c.Wulf, c.Liz, c.Squig],
         [c.Val]
     ),
@@ -110,7 +110,7 @@ const characterList = {
     "Parasoul": char10 = new character(
         c.Soul,
         [c.BBand, c.Bella, c.Double, c.Fukua, c.Pain, c.Rob],
-        [c.Liz, c.Fil, c.Peak, c.Squig, c.Umbrella, c.Anne, c.BDahl],
+        [c.Liz, c.Fil, c.Peak, c.Squig, c.Umbrella, c.Anne, c.BDahl, c.Mari],
         [c.Wulf, c.Fortune],
         [c.Val]
     ),
@@ -118,7 +118,7 @@ const characterList = {
     "Peacock": char11 = new character(
         c.Peak,
         [c.BBand, c.Bella, c.Double, c.Fil, c.Rob, c.Umbrella, c.Anne],
-        [c.Wulf, c.Liz, c.Fukua, c.Pain, c.Soul, c.Squig, c.BDahl],
+        [c.Wulf, c.Liz, c.Fukua, c.Pain, c.Soul, c.Squig, c.BDahl, c.Mari],
         [c.Fortune],
         [c.Val]
     ),
@@ -126,7 +126,7 @@ const characterList = {
     "Robo Fortune": char12 = new character(
         c.Rob,
         [c.BBand, c.Double, c.Liz, c.Fil, c.Umbrella, c.Anne],
-        [c.Wulf, c.Bella, c.Fortune, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Val, c.BDahl],
+        [c.Wulf, c.Bella, c.Fortune, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Val, c.BDahl, c.Mari],
         [],
         []
     ),
@@ -134,7 +134,7 @@ const characterList = {
     "Squigly": char13 = new character(
         c.Squig,
         [c.BBand, c.Rob],
-        [c.Wulf, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Peak, c.Val, c.Umbrella, c.Anne],
+        [c.Wulf, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Peak, c.Val, c.Umbrella, c.Anne, c.Mari],
         [c.Fortune, c.Pain, c.BDahl],
         []
     ),
@@ -142,7 +142,7 @@ const characterList = {
     "Valentine": char14 = new character(
         c.Val,
         [c.BBand, c.Bella, c.Double, c.Rob],
-        [c.Liz, c.Fil, c.Fukua, c.Soul, c.Squig, c.Umbrella, c.Anne, c.BDahl],
+        [c.Liz, c.Fil, c.Fukua, c.Soul, c.Squig, c.Umbrella, c.Anne, c.BDahl, c.Mari],
         [c.Wulf, c.Peak],
         [c.Fortune, c.Pain]
     ),
@@ -150,7 +150,7 @@ const characterList = {
     "Annie": char15 = new character(
         c.Anne,
         [c.BBand, c.Rob],
-        [c.Wulf, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Peak, c.Squig, c.Umbrella, c.BDahl],
+        [c.Wulf, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Peak, c.Squig, c.Umbrella, c.BDahl, c.Mari],
         [c.Fortune, c.Pain, c.Val],
         []
     ),
@@ -158,7 +158,7 @@ const characterList = {
     "Umbrella": char16 = new character(
         c.Umbrella,
         [c.BBand, c.Fil, c.Rob],
-        [c.Bella, c.Double, c.Liz, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Anne],
+        [c.Bella, c.Double, c.Liz, c.Fukua, c.Pain, c.Soul, c.Peak, c.Squig, c.Anne, c.Mari],
         [c.Wulf, c.Fortune, c.BDahl],
         [c.Val]
     ),
@@ -166,20 +166,18 @@ const characterList = {
     "Black Dahlia": char17 = new character(
         c.BDahl,
         [c.BBand, c.Bella, c.Anne],
-        [c.Double, c.Liz, c.Fil, c.Fukua, c.Pain, c.Peak, c.Rob, c.Squig],
+        [c.Double, c.Liz, c.Fil, c.Fukua, c.Pain, c.Peak, c.Rob, c.Squig, c.Mari],
         [c.Wulf, c.Fortune, c.Soul, c.Val, c.Umbrella],
         []
-    )
+    ),
 
-    /*
     "Marie": char18 = new character(
         "Marie",
-        [""],
-        [""],
-        [""],
-        [""]
+        [c.BBand],
+        [c.Anne, c.Wulf, c.BDahl, c.Bella, c.Double, c.Liz, c.Fil, c.Fukua, c.Soul, c.Rob, c.Squig, c.Umbrella],
+        [c.Fortune, c.Pain, c.Peak],
+        [c.Val]
     )
-    */
 }
 
 function loadSkullgirls()
