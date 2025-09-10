@@ -1,34 +1,21 @@
-/* war crimes */
-
 body {
-    background-color: azure;
+    background-color: lightskyblue;
 }
 
-img {
-    width: 120px;
-    height: 120px;
-    translate: 40px;
+.clickable {
+    cursor: pointer;
+    outline: 2px solid black;
 }
 
-.sideways {
-    transform: rotate(-90deg) translateY(-10px);
+.relationshipPosition {
+    position: relative;
 }
 
-.diagonal {
-    transform: rotate(-45deg) translateY(-10px);
+.overlay {
+    position: absolute;
+    left: 0;
 }
 
-.pushleft
-{
-    translate: -80px;
-}
-
-.sideways
-{
-    transform: rotate(-90deg);
-}
-
-.diagonal
-{
-    transform: translateX(-80px) rotate(-45deg);
+.rotated {
+    rotate: 180deg;
 }

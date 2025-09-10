@@ -1,118 +1,49 @@
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skullgirls Synergy Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 
-    <head>
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<body>
+    <script defer src="index.js" onload="loadSkullgirls()"></script>
 
-    <body>
+    <u><h1>Skullgirls Synergy Selector</h1></u>
+    <p>This site is meant as a tool to easily access information taken from
+        <a href="https://sites.google.com/view/sgteamguide/introduction?authuser=0">this online guide</a>,
+        which I do not claim ownership of.
+    </p>
+    <noscript><h2>This site uses JavaScript.</h2></noscript>
+    
+    <h2>Select characters to add them to the list</h2>
+    <div id="characters">
+        <!-- Character roster will be added here -->
+    </div>
 
-        <h1>Skullgirls Synergy Selector</h1>
+    <u><h1>Synergies</h1></u>
+    <h2>Click on characters to remove them from the list</h2>
+    <h3>Arrows point to how well a character supports another</h3>
+    <h3>(example A->B with Good means A is Good as a support for B)</h3>
+    <div id="selected">
+        <img id="skullgirl0" onclick="removeSkullgirl(0)" class="clickable">
+        <span class="relationshipPosition">
+            <img id="relationship0a">
+            <img id="relationship0b" class="overlay rotated">
+        </span>
+        <img id="skullgirl1" onclick="removeSkullgirl(1)" class="clickable">
+        <span class="relationshipPosition">
+            <img id="relationship1a">
+            <img id="relationship1b" class="overlay rotated">
+        </span>
+        <img id="skullgirl2" onclick="removeSkullgirl(2)" class="clickable">
+        <span class="relationshipPosition">
+            <img id="relationship2a">
+            <img id="relationship2b" class="overlay rotated">
+        </span>
+        <img id="skullgirl3" onclick="removeSkullgirl(0)" class="clickable">
+    </div>
 
-        <p>This site is meant as a tool to easily access information taken from <a href="https://sites.google.com/view/sgteamguide/introduction?authuser=0">this online guide</a>, which I do not claim ownership of.</p>
-
-        <noscript><h2>This site uses JavaScript.</h2></noscript>
-
-        <div>
-            <p>Fighter 1:</p>
-            <select name="Fighter" id="Fighter1In">
-                <option value="None">(No Fighter)</option>
-                <option value="Anne">Annie</option>
-                <option value="Wulf">Beowulf</option>
-                <option value="BBand">Big Band</option>
-                <option value="BDahl">Black Dahlia</option>
-                <option value="Bella">Cerebella</option>
-                <option value="Double">Double</option>
-                <option value="Liz">Eliza</option>
-                <option value="Fil">Filia</option>
-                <option value="Fukua">Fukua</option>
-                <option value="Fortune">Ms. Fortune</option>
-                <option value="Pain">Painwheel</option>
-                <option value="Soul">Parasoul</option>
-                <option value="Peak">Peacock</option>
-                <option value="Rob">Robo Fortune</option>
-                <option value="Squig">Squigly</option>
-                <option value="Umbrella">Umbrella</option>
-                <option value="Val">Valentine</option>
-            </select>
-            
-            <p>Fighter 2:</p>
-            <select name="Fighter" id="Fighter2In">
-                <option value="None">(No Fighter)</option>
-                <option value="Anne">Annie</option>
-                <option value="Wulf">Beowulf</option>
-                <option value="BBand">Big Band</option>
-                <option value="BDahl">Black Dahlia</option>
-                <option value="Bella">Cerebella</option>
-                <option value="Double">Double</option>
-                <option value="Liz">Eliza</option>
-                <option value="Fil">Filia</option>
-                <option value="Fukua">Fukua</option>
-                <option value="Fortune">Ms. Fortune</option>
-                <option value="Pain">Painwheel</option>
-                <option value="Soul">Parasoul</option>
-                <option value="Peak">Peacock</option>
-                <option value="Rob">Robo Fortune</option>
-                <option value="Squig">Squigly</option>
-                <option value="Umbrella">Umbrella</option>
-                <option value="Val">Valentine</option>
-            </select>
-
-            <p>Fighter 3:</p>
-            <select name="Fighter" id="Fighter3In">
-                <option value="None">(No Fighter)</option>
-                <option value="Anne">Annie</option>
-                <option value="Wulf">Beowulf</option>
-                <option value="BBand">Big Band</option>
-                <option value="BDahl">Black Dahlia</option>
-                <option value="Bella">Cerebella</option>
-                <option value="Double">Double</option>
-                <option value="Liz">Eliza</option>
-                <option value="Fil">Filia</option>
-                <option value="Fukua">Fukua</option>
-                <option value="Fortune">Ms. Fortune</option>
-                <option value="Pain">Painwheel</option>
-                <option value="Soul">Parasoul</option>
-                <option value="Peak">Peacock</option>
-                <option value="Rob">Robo Fortune</option>
-                <option value="Squig">Squigly</option>
-                <option value="Umbrella">Umbrella</option>
-                <option value="Val">Valentine</option>
-            </select>
-        </div>
-
-        <br>
-        <button type="button" onclick="showAllSynergies()">Show Synergies</button><br>
-
-        <div>
-            <p class="output" id="Fighter1Out"></p>
-            <p class="output" id="Synergy1Out"></p>
-
-            <p class="output" id="Fighter2Out"></p>
-            <p class="output" id="Synergy2Out"></p>
-
-            <p class="output" id="Fighter3Out"></p>
-            <p class="output" id="Synergy3Out"></p>
-        </div>
-        
-        <div>
-            <br><br>
-            <img src="" id="Fighter1">
-            <img src="" id="Synergy1With2">
-            <img src="" class="pushleft" id="Synergy2With1">
-            <img src="" class="pushleft" id="Fighter2">
-            
-            <br><br>
-            <img src="" class="sideways" id="Synergy1With3">
-            <img src="" class="sideways pushleft" id="Synergy3With1">
-            
-            <img src="" class="diagonal" id="Synergy2With3">
-            <img src="" class="diagonal pushleft" id="Synergy3With2">
-            <br><br>
-            <img src="" id="Fighter3">
-        </div>
-
-        <script src="CharInfo.js"></script>
-    </body>
+</body>
 </html>

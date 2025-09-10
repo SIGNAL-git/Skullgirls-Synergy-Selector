@@ -1,0 +1,123 @@
+{
+    "skullgirls":[
+        {
+            "character":"Beowulf",
+            "favorite":["Big Band", "Robo Fortune", "Umbrella"],
+            "good":["Cerebella", "Double", "Eliza", "Fukua", "Parasoul", "Squigly", "Annie", "Black Dahlia"],
+            "decent":["Filia", "Painwheel", "Peacock", "Valentine"],
+            "bad":["Ms. Fortune"]
+        },
+        {
+            "character":"Big Band",
+            "favorite":["Double", "Painwheel", "Parasoul", "Robo Fortune", "Squigly", "Annie"],
+            "good":["Beowulf", "Cerebella", "Eliza", "Filia", "Fukua", "Peacock", "Valentine", "Umbrella"],
+            "decent":[],
+            "bad":["Ms. Fortune"]
+        },
+        {
+            "character":"Cerebella",
+            "favorite":["Big Band", "Double", "Robo Fortune"],
+            "good":["Beowulf", "Cerebella", "Filia", "Painwheel", "Peacock", "Squigly", "Valentine", "Umbrella"],
+            "decent":["Ms. Fortune"],
+            "bad":[]
+        },
+        {
+            "character":"Double",
+            "favorite":["Big Band", "Eliza", "Fukua", "Parasoul", "Robo Fortune"],
+            "good":["Beowulf", "Cerebella", "Filia", "Painwheel", "Peacock", "Squigly", "Valentine", "Umbrella", "Annie", "Black Dahlia"],
+            "decent":["Ms. Fortune"],
+            "bad":[]
+        },
+        {
+            "character":"Eliza",
+            "favorite":["Big Band", "Double", "Fukua", "Robo Fortune", "Squigly"],
+            "good":["Cerebella", "Filia", "Parasoul", "Peacock", "Annie"],
+            "decent":["Beowulf", "Ms. Fortune", "Painwheel", "Umbrella", "Black Dahlia"],
+            "bad":["Valentine"]
+        },
+        {
+            "character":"Filia",
+            "favorite":["Big Band", "Cerebella", "Double", "Eliza", "Robo Fortune"],
+            "good":["Fukua", "Painwheel", "Parasoul", "Peacock", "Squigly", "Umbrella", "Annie"],
+            "decent":["Beowulf", "Black Dahlia"],
+            "bad":["Ms. Fortune", "Valentine"]
+        },
+        {
+            "character":"Ms. Fortune",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Fukua",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Painwheel",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Parasoul",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Peacock",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Robo Fortune",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Squigly",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Valentine",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Annie",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Umbrella",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        },
+        {
+            "character":"Black Dahlia",
+            "favorite":[],
+            "good":[],
+            "decent":[],
+            "bad":[]
+        }
+    ]
+}
